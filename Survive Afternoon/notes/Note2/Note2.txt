@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+draw_self();
+
+if aimDir >= 0 and aimDir < 360
+{
+draw_player_weapon();
+}
+
+
+
+
+
+// Declare Temp
+var vc = view_camera[0];
+var cx = camera_get_view_x(vc);
+var cy = camera_get_view_y(vc);
+var cw = camera_get_view_width(vc);
+
+// Draw Healthbar
+draw_healthbar(cx + 100, cy + 150, cx + 900, cy + 170, ( PlayerHealth * 100 ) / 100, $FF00FFFF & $FFFFFF, $FF0000FF & $FFFFFF, $FF00FF00 & $FFFFFF, 0, (($FF00FFFF>>24) != 0), (($FF4D4D4D>>24) != 0));
+
+// Draw Value
+draw_text(cx + 100, cy+ 300, string("player hit: ") + string(playerHit));
+
+// Draw Value
+draw_text(cx + 100, cy+ 400, string("player hit CD:") + string(phCD));
+
+
+
+
+
+
+
+
+if(phCD == 60)
+{
+	if(playerHit == true)
+	{
+		PlayerHealth += -15;
+	
+		phCD --;
+	
+		if(phCD <= 0)
+		{
+			phCD = 60;
+			playerHit = false;
+		}
+	}
+}
+
+playerHit = false;

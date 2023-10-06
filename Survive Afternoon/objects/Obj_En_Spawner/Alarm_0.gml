@@ -1,7 +1,8 @@
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
 /// @DnDHash : 13747EB2
-alarm_set(0, 30);
+/// @DnDArgument : "steps" "70"
+alarm_set(0, 70);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -20,6 +21,16 @@ if(global.enemyCount < en_C)
 	/// @DnDArgument : "objectid" "Obj_Enemy"
 	/// @DnDSaveInfo : "objectid" "Obj_Enemy"
 	instance_create_layer(random_range(120,1900), random_range(130,1900), "Instances", Obj_Enemy);
+
+	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 3AC259BC
+	/// @DnDParent : 2CFBEA14
+	/// @DnDArgument : "xpos" "random_range(120,1900)"
+	/// @DnDArgument : "ypos" "random_range(130,1900)"
+	/// @DnDArgument : "objectid" "Obj_EnemyBomb"
+	/// @DnDSaveInfo : "objectid" "Obj_EnemyBomb"
+	instance_create_layer(random_range(120,1900), random_range(130,1900), "Instances", Obj_EnemyBomb);
 
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1

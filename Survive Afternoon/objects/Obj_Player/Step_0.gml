@@ -1,4 +1,12 @@
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 570B2532
+/// @DnDArgument : "code" "$(13_10)if(PlayerHealth <= 0)$(13_10){$(13_10)	instance_destroy();$(13_10)}$(13_10)#region$(13_10)upKey = keyboard_check( ord("W") );$(13_10)leftKey = keyboard_check( ord("A") );$(13_10)downKey = keyboard_check( ord("S") );$(13_10)rightKey = keyboard_check( ord("D") );$(13_10)$(13_10)shootKey = mouse_check_button( mb_left );$(13_10)$(13_10)$(13_10)$(13_10)#endregion$(13_10)$(13_10)#region$(13_10)//Swapping the Weapon$(13_10)var _playerWeapons = Obj_Weapon;$(13_10)$(13_10)$(13_10)$(13_10)#endregion$(13_10)// Shooting the Weapon$(13_10)#region$(13_10)if shootTimer > 0 {shootTimer--; };$(13_10)if shootKey and shootTimer <= 0 {$(13_10)$(13_10)//Reset shoot timer$(13_10)shootTimer = shootCooldown;$(13_10)$(13_10)$(13_10)// Create the bullet$(13_10)var _xOffset = lengthdir_x( weaponLength + weaponOffsetDist, aimDir );$(13_10)var _yOffset = lengthdir_y( weaponLength + weaponOffsetDist, aimDir );$(13_10)$(13_10)var _spread = weaponSpread;$(13_10)var _spreadDiv = _spread / max( bulletNum-1, 1 );$(13_10)$(13_10)//Creating the correct number of bullets$(13_10)for ( var i = 0; i < bulletNum; i++)$(13_10){$(13_10)var _bulletInst = instance_create_depth( x + _xOffset + i, centerY + _yOffset, depth-100, Obj_bullet ); // **Storing EACH CREATED INSTANCE of object**$(13_10)$(13_10)// Change the Bullet's direction$(13_10)with( _bulletInst )$(13_10){$(13_10)dir = other.aimDir - _spread/2 + _spreadDiv*i; // Setting instance diretion to direction of where player is aiming$(13_10)$(13_10)//Turning bullet to correct direction at creation point if necessary$(13_10)if dirFix == true { image_angle = dir; }$(13_10)}$(13_10)}$(13_10)}$(13_10)$(13_10)$(13_10)$(13_10)#endregion$(13_10)$(13_10)// Player Movement$(13_10)#region$(13_10)// Getting Player Movement Direction$(13_10)var _horizKey = rightKey - leftKey;$(13_10)var _vertKey = downKey - upKey;$(13_10)moveDir = point_direction( 0, 0, _horizKey, _vertKey);$(13_10)$(13_10)//Getting X & Y speeds$(13_10)var _spd = 0;$(13_10)var _inputLevel = point_distance( 0, 0, _horizKey, _vertKey);$(13_10)_inputLevel = clamp( _inputLevel, 0, 1 );$(13_10)_spd = moveSpd * _inputLevel;$(13_10)$(13_10)xspd = lengthdir_x( _spd, moveDir );$(13_10)yspd = lengthdir_y( _spd, moveDir );$(13_10)$(13_10)// Player Collisions$(13_10)if place_meeting( x + xspd, y, Obj_Block )$(13_10){$(13_10)xspd = 0;$(13_10)}$(13_10)if place_meeting( x, y + yspd, Obj_Block )$(13_10){$(13_10)yspd = 0;$(13_10)}$(13_10)$(13_10)$(13_10)//Moving the Player$(13_10)x += xspd;$(13_10)y += yspd;$(13_10)$(13_10)//Depth$(13_10)depth = -bbox_bottom;$(13_10)#endregion$(13_10)$(13_10)// Player Aiming Inputs$(13_10)#region$(13_10)centerY = y + centerYOffset;$(13_10)$(13_10)// Aiming$(13_10)aimDir = point_direction( x, centerY, mouse_x, mouse_y)$(13_10)$(13_10)#endregion$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)/*$(13_10)coolDown += -1;$(13_10)$(13_10)$(13_10)var l18B874EE_0;$(13_10)l18B874EE_0 = mouse_check_button(mb_left);$(13_10)if (l18B874EE_0)$(13_10){$(13_10)	if(coolDown <= 0)$(13_10)	{$(13_10)		instance_create_layer(x + 0, y + 0, "Instances", Obj_bullet);$(13_10)	$(13_10)		coolDown = 10;$(13_10)	}$(13_10)}$(13_10)*/$(13_10)$(13_10)$(13_10)/**/$(13_10)$(13_10)"
 
+if(PlayerHealth <= 0)
+{
+	instance_destroy();
+}
 #region
 upKey = keyboard_check( ord("W") );
 leftKey = keyboard_check( ord("A") );
@@ -121,3 +129,28 @@ if (l18B874EE_0)
 */
 
 
+/**/
+
+/**/
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 591C36E0
+/// @DnDArgument : "var" "PlayerHealth"
+/// @DnDArgument : "op" "3"
+if(PlayerHealth <= 0)
+{
+	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 30FA1386
+	/// @DnDParent : 591C36E0
+	instance_destroy();
+
+	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 3C31DE18
+	/// @DnDParent : 591C36E0
+	/// @DnDArgument : "objectid" "Obj_ExplodeRed"
+	/// @DnDSaveInfo : "objectid" "Obj_ExplodeRed"
+	instance_create_layer(0, 0, "Instances", Obj_ExplodeRed);
+}
