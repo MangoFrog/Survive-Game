@@ -20,6 +20,6 @@ instance_destroy();
 /// @DnDHash : 076E35D2
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
-/// @DnDArgument : "objectid" "Obj_Explode"
-/// @DnDSaveInfo : "objectid" "Obj_Explode"
-instance_create_layer(x + 0, y + 0, "Instances", Obj_Explode);
+/// @DnDArgument : "objectid" "Obj_ExplodeYellow"
+/// @DnDSaveInfo : "objectid" "Obj_ExplodeYellow"
+instance_create_layer(x + 0, y + 0, "Instances", Obj_ExplodeYellow);

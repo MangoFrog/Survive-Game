@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Obj_Explode",
+  "name": "Obj_ExplodeYellow",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":true,},
   ],
@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Spr_ExplodeBlue",
-    "path": "sprites/Spr_ExplodeBlue/Spr_ExplodeBlue.yy",
+    "name": "Spr_ExplodeYellow",
+    "path": "sprites/Spr_ExplodeYellow/Spr_ExplodeYellow.yy",
   },
   "spriteMaskId": null,
   "visible": true,

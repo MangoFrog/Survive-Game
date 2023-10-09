@@ -24,7 +24,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.8.2.106",
   },
   "resources": [
     {"id":{"name":"Note2","path":"notes/Note2/Note2.yy",},},
@@ -38,7 +38,7 @@
     {"id":{"name":"Spr_RedShot","path":"sprites/Spr_RedShot/Spr_RedShot.yy",},},
     {"id":{"name":"spr_bullet2","path":"sprites/spr_bullet2/spr_bullet2.yy",},},
     {"id":{"name":"Obj_ShootingEnemy","path":"objects/Obj_ShootingEnemy/Obj_ShootingEnemy.yy",},},
-    {"id":{"name":"Spr_Explode2","path":"sprites/Spr_Explode2/Spr_Explode2.yy",},},
+    {"id":{"name":"Spr_ExplodeBlue","path":"sprites/Spr_ExplodeBlue/Spr_ExplodeBlue.yy",},},
     {"id":{"name":"Obj_Explode","path":"objects/Obj_Explode/Obj_Explode.yy",},},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"numbers","path":"notes/numbers/numbers.yy",},},
@@ -70,6 +70,7 @@
     {"id":{"name":"Obj_WeaponLeft","path":"objects/Obj_WeaponLeft/Obj_WeaponLeft.yy",},},
     {"id":{"name":"TitleScreen","path":"rooms/TitleScreen/TitleScreen.yy",},},
     {"id":{"name":"Spr_AppleCat","path":"sprites/Spr_AppleCat/Spr_AppleCat.yy",},},
+    {"id":{"name":"Obj_ExplodeYellow","path":"objects/Obj_ExplodeYellow/Obj_ExplodeYellow.yy",},},
     {"id":{"name":"Spr_BombSlime","path":"sprites/Spr_BombSlime/Spr_BombSlime.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_title_2","path":"sprites/spr_title_2/spr_title_2.yy",},},
@@ -82,6 +83,7 @@
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"TitleScreen","path":"rooms/TitleScreen/TitleScreen.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
