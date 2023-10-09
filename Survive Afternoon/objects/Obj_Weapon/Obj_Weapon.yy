@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Spr_Weapon",
-    "path": "sprites/Spr_Weapon/Spr_Weapon.yy",
+    "name": "Spr_Banana",
+    "path": "sprites/Spr_Banana/Spr_Banana.yy",
   },
   "spriteMaskId": null,
   "visible": true,

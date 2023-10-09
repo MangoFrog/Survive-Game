@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_bullet",
-    "path": "sprites/spr_bullet/spr_bullet.yy",
+    "name": "Spr_PeeledBan",
+    "path": "sprites/Spr_PeeledBan/Spr_PeeledBan.yy",
   },
   "spriteMaskId": null,
   "visible": true,

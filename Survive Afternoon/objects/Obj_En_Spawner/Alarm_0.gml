@@ -42,6 +42,16 @@ if(global.enemyCount < en_C)
 	/// @DnDSaveInfo : "objectid" "Obj_ShootingEnemy"
 	instance_create_layer(random_range(120,1900), random_range(130,1900), "Instances", Obj_ShootingEnemy);
 
+	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 1707D3E9
+	/// @DnDParent : 2CFBEA14
+	/// @DnDArgument : "xpos" "random_range(120,1900)"
+	/// @DnDArgument : "ypos" "random_range(130,1900)"
+	/// @DnDArgument : "objectid" "Obj_EnemyDash"
+	/// @DnDSaveInfo : "objectid" "Obj_EnemyDash"
+	instance_create_layer(random_range(120,1900), random_range(130,1900), "Instances", Obj_EnemyDash);
+
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 4160043C
