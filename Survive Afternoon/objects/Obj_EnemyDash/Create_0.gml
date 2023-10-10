@@ -36,3 +36,10 @@ _cooldown = 30;
 /// @DnDVersion : 1
 /// @DnDHash : 12960410
 alarm_set(0, 30);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 5E458AC4
+/// @DnDArgument : "expr" "50"
+/// @DnDArgument : "var" "YellowHealth"
+YellowHealth = 50;

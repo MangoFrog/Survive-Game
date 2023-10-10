@@ -1,16 +1,10 @@
-/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 46CABD51
-/// @DnDArgument : "xpos_relative" "1"
-/// @DnDArgument : "ypos_relative" "1"
-/// @DnDArgument : "objectid" "Obj_ExplodeYellow"
-/// @DnDSaveInfo : "objectid" "Obj_ExplodeYellow"
-instance_create_layer(x + 0, y + 0, "Instances", Obj_ExplodeYellow);
-
-/// @DnDAction : YoYo Games.Instances.Destroy_Instance
-/// @DnDVersion : 1
-/// @DnDHash : 23D54D46
-instance_destroy();
+/// @DnDHash : 416E81A5
+/// @DnDArgument : "expr" "-25"
+/// @DnDArgument : "expr_relative" "1"
+/// @DnDArgument : "var" "YellowHealth"
+YellowHealth += -25;
 
 /// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1

@@ -15,3 +15,10 @@ eSpeed = random_range(3,6);
 /// @DnDHash : 0BD76E15
 /// @DnDArgument : "steps" "60"
 alarm_set(0, 60);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 4D5FF3C5
+/// @DnDArgument : "expr" "100"
+/// @DnDArgument : "var" "RedHealth"
+RedHealth = 100;

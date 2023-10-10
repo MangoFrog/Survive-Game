@@ -9,3 +9,10 @@ speed = 0;
 /// @DnDArgument : "expr" "random_range(3,6)"
 /// @DnDArgument : "var" "eSpeed"
 eSpeed = random_range(3,6);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 23FDD071
+/// @DnDArgument : "expr" "75"
+/// @DnDArgument : "var" "PurpleHealth"
+PurpleHealth = 75;

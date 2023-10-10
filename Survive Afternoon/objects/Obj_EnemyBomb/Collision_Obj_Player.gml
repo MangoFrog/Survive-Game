@@ -7,11 +7,11 @@ instance_destroy();
 /// @DnDVersion : 1
 /// @DnDHash : 29A79F18
 /// @DnDApplyTo : {Obj_Player}
-/// @DnDArgument : "expr" "-15"
+/// @DnDArgument : "expr" "-25"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "var" "PlayerHealth"
 with(Obj_Player) {
-PlayerHealth += -15;
+PlayerHealth += -25;
 
 }
 
